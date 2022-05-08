@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+@font-face {
+  font-family: "Outfit-Light";
+  src: url(Outfit/static/Outfit-Light.ttf);
+}
+
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url(Outfit/static/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Outfit-SemiBold";
+  src: url(Outfit/static/Outfit-SemiBold.ttf);
+}
+
+:root {
+  /* Primary color */
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral colors */
+  --White: hsl(0, 0%, 100%);
+  --primarycolor: hsl(217, 54%, 11%);
+  --secondarycolor: hsl(216, 50%, 16%);
+  --Verydarkblue: hsl(215, 32%, 27%);
+  --boxshadow: hsl(217, 55%, 10%);
+  /* Footer color */
+  /* --black: hsl(0, 0%, 0%); */
+  /* Font size */
+  font-size: 15px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primarycolor);
+  font-family: "Outfit", sans-serif;
+  display: grid;
+  place-content: center;
+}
+
+
+.card {
+  background-color: var(--secondarycolor);
+  -webkit-box-shadow: 0rem 2rem 0rem 1rem var(--boxshadow);
+  border-radius: 4%;
+  height: 40rem;
+  width: 350px;
+  padding: 1.75rem;
+  margin: 0 auto;
+}
+
+.nft_image {
+  max-height: 20rem;
+  max-width: 20rem;
+  border-radius: 0.6rem;
+  transition: 0.5s ease-in-out;
+}
+
+.overlay, .view-icon {
+    opacity: 0;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0.6rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.overlay {
+    background-color: var(--Cyan);
+    border-radius: 0.6rem;
+}
+
+.images:hover .view-icon {
+    opacity: 0.5;
+    background-color: var(--Cyan);
+    border-radius: 0.6rem;
+
+}
+
+.nft_name {
+  padding-top: 1rem;
+  color: White;
+}
+
+.nft_name:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.description {
+  color: var(--Softblue);
+  padding-top: 1rem;
+}
+
+.price {
+  color: var(--Cyan);
+}
+
+.day_left {
+  color: var(--Softblue);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.details div {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details div p {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.details .value p {
+  font-family: "Outfit-SemiBold", sans-serif;
+  color: var(--Cyan);
+}
+
+.details .value img {
+  width: 0.8rem;
+  height: 1.2rem;
+}
+
+.details .time p {
+  font-family: "Outfit-Regular", sans-serif;
+  color: var(--Softblue);
+}
+
+.details .time img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+hr {
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid var(--Verydarkblue);
+  border-bottom: none;
+}
+
+.author {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.author img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.author p {
+  display: flex;
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1.2rem;
+  color: var(--Softblue);
+  margin: 0 1rem;
+}
+
+.author p span {
+  color: var(--White);
+  transition: 0.4s ease-in-out;
+}
+
+.text h1:hover, .author p span:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.attribution {
+  padding-top: 0.7rem;
+  color: White;
+}
